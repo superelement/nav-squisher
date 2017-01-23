@@ -1,6 +1,6 @@
 {
   "name": "nav-squisher",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Give your global header a bit more room to breath with this nav compacting tool",
   "main": "dist/index.js",
   "scripts": {

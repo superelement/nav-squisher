@@ -39,7 +39,7 @@ gulp.task('js', function() {
     .pipe(uglify({
     	mangle: false
     }))
-    .pipe(rename('navsquisher.min.js'))
+    .pipe(rename('nav-squisher.min.js'))
     .pipe(gulp.dest('dist/'));
 });
 
@@ -65,7 +65,7 @@ var autoPrefixerBrowsers = [
 
 gulp.task('css', function() {
 
-    return gulp.src("src/navsquisher.scss")
+    return gulp.src("src/nav-squisher.scss")
       //.pipe(sourcemaps.init())
       .pipe(sass({ style: 'compressed' }))
         .on('error', function (err) {
