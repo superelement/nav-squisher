@@ -1,0 +1,94 @@
+﻿<html lang="en-GB">  
+    <head>
+        <title>Nav Squisher Example</title>
+        <meta charset="utf-8">
+
+        <link type="text/css" rel="stylesheet" href="../../dist/navsquisher.css">
+        <style>
+            /* A few extra cosmetic styles (not part of library) */
+
+            .navsquisher-btn {
+                color: white;
+                min-height: 50px;
+                background-color: #d5dbe5;
+            }
+            .navsquisher-btninner {
+                padding: 10px !important;
+                background-color: #859ec2;
+            }
+        </style>
+    </head>
+
+    <body>
+        
+        <nav class="navsquisher navsquisher-nojs">
+            <ul class="navsquisher-list">
+                <li class="navsquisher-item">
+                    <a href="#" class="navsquisher-btn">
+                        <span class="navsquisher-btninner">
+                            List item
+                        </span>
+                    </a>
+                </li>
+
+                <li class="navsquisher-item">
+                    <a href="#" class="navsquisher-btn">
+                        <span class="navsquisher-btninner">
+                            List item
+                        </span>
+                    </a>
+                </li>
+
+                <li class="navsquisher-item">
+                    <a href="#" class="navsquisher-btn">
+                        <span class="navsquisher-btninner">
+                            List item with a very very really really long title
+                        </span>
+                    </a>
+                </li>
+
+                <li class="navsquisher-item">
+                    <a href="#" class="navsquisher-btn">
+                        <span class="navsquisher-btninner">
+                            List item
+                        </span>
+                    </a>
+                </li>
+
+                <li class="navsquisher-item">
+                    <a href="#" class="navsquisher-btn">
+                        <span class="navsquisher-btninner">
+                            List item
+                        </span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <script src="../index.js"></script>
+        <script>
+            (function() {
+
+                var $navSquisher = document.querySelector(".navsquisher");
+                
+                // gets the window viewport width
+                function isMobileVP() {
+                    return window.innerWidth < 768
+                }
+
+                // initialize library
+                navSquisher.init($navSquisher, {
+                    condition: !isMobileVP() // ignores mobile
+                });
+
+                // needs a resize handler so it can clear mobile styles and recalculate when window is resized
+                window.addEventListener("resize", function() {
+                    var isMb = isMobileVP()
+
+                    navSquisher.clearClasses($navSquisher, !isMb);
+                    if(!isMb) navSquisher.resize($navSquisher, !isMb);
+                });
+            })();
+        </script>
+    </body>
+</html>

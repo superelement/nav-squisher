@@ -1,0 +1,54 @@
+.navsquisher-list {
+  display: table;
+  text-align: justify;
+  padding-left: 0;
+  width: 100%;
+  min-height: 25px;
+  margin-bottom: 0;
+  transition: opacity 0.2s linear;
+  opacity: 0; }
+  .is-ready .navsquisher-list, .navsquisher-nojs .navsquisher-list {
+    opacity: 1; }
+  .is-ready .navsquisher-list {
+    display: block; }
+  .navsquisher-nojs .navsquisher-list:after {
+    content: '';
+    width: 100%;
+    /* Ensures there are at least 2 lines of text, so justification works */
+    display: inline-block; }
+
+.navsquisher-item {
+  vertical-align: middle;
+  text-align: center;
+  padding: 10px 20px;
+  display: table-cell !important; }
+  .is-calc .navsquisher-item {
+    padding: 0;
+    float: left;
+    display: block !important;
+    min-height: 0;
+    max-width: 200px; }
+  .is-ready .navsquisher-item {
+    max-width: none !important; }
+
+.navsquisher-btn {
+  font-size: 20px;
+  vertical-align: middle;
+  display: inline-block;
+  padding: 10px 0;
+  margin: 0;
+  width: 100%;
+  position: relative; }
+  .is-ready .navsquisher-btn {
+    display: block; }
+
+.is-ready .navsquisher-btninner {
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: 6px;
+  right: 6px;
+  padding: 12px 0;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%); }

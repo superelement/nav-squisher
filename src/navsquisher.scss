@@ -1,0 +1,81 @@
+
+$ns: ".navsquisher";
+$isReady: ".is-ready";
+$isCalc: ".is-calc";
+
+#{$ns} {
+
+  &-list {
+    display: table;
+    text-align: justify;
+    padding-left: 0;
+    width: 100%;
+    min-height: 25px;
+    margin-bottom: 0;
+    transition: opacity 0.2s linear;
+    opacity: 0;
+
+    #{$isReady} &, #{$ns}-nojs & {
+      opacity: 1;
+    }
+
+    #{$isReady} & {
+      display: block;
+    }
+    // just used in the non-js fallback version
+    &:after {
+      #{$ns}-nojs & {
+        content: '';
+        width: 100%; /* Ensures there are at least 2 lines of text, so justification works */
+        display: inline-block;
+      }
+    }
+  }
+
+  &-item {
+    vertical-align: middle;
+    text-align: center;
+    // defaults which apply to no-js version
+    padding: 10px 20px;
+    display: table-cell !important;
+    //min-height: 9rem;
+    // applied after calculations
+    #{$isCalc} & {
+      padding: 0;
+      float: left;
+      display: block !important;
+      min-height: 0;
+      max-width: 200px; // change this if you want a different max width
+    }
+    // applied just before calculations
+    #{$isReady} & {
+      max-width: none !important; // needs to come off to allow for extra padding
+    }
+  }
+
+  &-btn {
+    font-size: 20px; // change this to what you want
+    vertical-align: middle;
+    display: inline-block;
+    padding: 10px 0;
+    margin: 0;
+    width: 100%;
+    position: relative;
+
+    #{$isReady} & {
+      display: block;
+    }
+  }
+
+  &-btninner {
+    #{$isReady} & {
+      display: inline-block;
+      position: absolute;
+      top: 50%;
+      left: 6px;
+      right: 6px;
+      padding: 12px 0;
+      transform: translateY(-50%);
+    }
+  }
+}

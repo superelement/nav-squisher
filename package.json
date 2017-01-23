@@ -1,0 +1,40 @@
+{
+  "name": "nav-squisher",
+  "version": "1.0.0",
+  "description": "Give your global header a bit more room to breath with this nav compacting tool",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "gulp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/superelement/nav-squisher.git"
+  },
+  "keywords": [
+    "nav",
+    "navigation",
+    "squish",
+    "compact"
+  ],
+  "author": "Jim Doyle",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/superelement/nav-squisher/issues"
+  },
+  "homepage": "https://github.com/superelement/nav-squisher#readme",
+  "devDependencies": {
+    "babel-preset-es2015": "^6.14.0",
+    "es6-promise": "^3.2.1",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-babel": "^6.1.2",
+    "gulp-concat": "^2.6.0",
+    "gulp-jasmine": "^2.4.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-uglify": "^2.0.0",
+    "gulp-watch": "^4.3.9",
+    "run-sequence": "^1.2.2"
+  }
+}
